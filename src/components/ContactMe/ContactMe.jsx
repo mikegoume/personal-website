@@ -3,7 +3,10 @@ import ContactForm from "./components/ContactForm/ContactForm";
 
 function ContactMe() {
   return (
-    <div className="flex flex-col my-10 text-white lg:flex-row">
+    <div
+      id="contact-container"
+      className="flex flex-col my-10 text-white lg:flex-row"
+    >
       <div className="px-6 py-24 bg-blue lg:w-1/3">
         <p className="text-2xl text-left font-bold mb-2">Get in touch</p>
         <p className="text-base text-left font-semibold">

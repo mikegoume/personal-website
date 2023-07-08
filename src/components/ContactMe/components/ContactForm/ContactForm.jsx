@@ -1,22 +1,45 @@
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@mui/material";
-import React from "react";
 import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
+  const form = useRef();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const sendEmail = (e) => {
+    console.log(e);
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_yiqxor3",
+        "template_yleyzrj",
+        form.current,
+        "MF02S8wuIcl9_44R6"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full">
+    <form ref={form} onSubmit={handleSubmit(sendEmail)} className="w-full">
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            for="grid-first-name"
+            htmlFor="grid-first-name"
           >
             First Name
           </label>
@@ -25,9 +48,9 @@ const ContactForm = () => {
             id="grid-first-name"
             type="text"
             placeholder="Jane"
-            {...register("firstName", { required: true })}
+            {...register("user_name", { required: true })}
           />
-          {errors.firstName && (
+          {errors.user_name && (
             <p className="text-red-500 text-xs italic">
               Please fill out this field.
             </p>
@@ -36,7 +59,7 @@ const ContactForm = () => {
         <div className="w-full md:w-1/2 px-3">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            for="grid-last-name"
+            htmlFor="grid-last-name"
           >
             Last Name
           </label>
@@ -58,7 +81,7 @@ const ContactForm = () => {
         <div className="w-full px-3">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            for="grid-email"
+            htmlFor="grid-email"
           >
             Email
           </label>
@@ -67,9 +90,9 @@ const ContactForm = () => {
             id="grid-email"
             type="email"
             placeholder="janedoe@gmail.com"
-            {...register("email", { required: true })}
+            {...register("user_email", { required: true })}
           />
-          {errors.email && (
+          {errors.user_email && (
             <p className="text-red-500 text-xs italic">
               Please fill out this field.
             </p>
@@ -80,7 +103,7 @@ const ContactForm = () => {
         <div className="w-full px-3">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            for="grid-message"
+            htmlFor="grid-message"
           >
             Message
           </label>
@@ -100,7 +123,7 @@ const ContactForm = () => {
       </div>
       <div className="flex flex-row justify-end">
         <Button variant="contained" type="submit">
-          Test
+          Send
         </Button>
       </div>
     </form>

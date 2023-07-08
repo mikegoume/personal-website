@@ -11,7 +11,7 @@ const WorkExperience = () => {
   const [showMoreProseed, setShowMoreProseed] = useState(false);
 
   return (
-    <div className="flex-col pt-20 px-10">
+    <div id="work-container" className="flex-col pt-20 px-10">
       <p className="text-2xl text-left font-bold mb-8">Work Experience</p>
       <div className="flex flex-col transition-all duration-1000">
         <div className="flex flex-row gap-5">

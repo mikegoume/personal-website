@@ -4,7 +4,7 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="flex-col pt-20 px-10">
+    <div id="about-container" className="flex-col pt-20 px-10">
       <p className="text-2xl text-left font-bold mb-8">About Me</p>
       <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-7 items-center">
         <div className="flex flex-col align-center">

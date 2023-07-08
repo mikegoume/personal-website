@@ -36,7 +36,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="flex-col pt-20 px-10">
+    <div id="skills-container" className="flex-col pt-20 px-10">
       <p className="text-2xl text-left font-bold mb-8">My Skills</p>
       <div className="flex flex-col gap-y-4 lg:flex-row lg:justify-between lg:w-full">
         <SkillCard skillTitle="Front End" skillList={skillList[0]} index={0} />
