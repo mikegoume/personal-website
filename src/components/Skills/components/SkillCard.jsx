@@ -5,12 +5,12 @@ const SkillCard = (props) => {
 
   return (
     <div className="w-full mx-auto overflow-hidden rounded-xl shadow-lg flex-column justify-content:space-between align-items:center lg:w-1/4 lg:mx-0">
-      <div className="lg:px-20 py-6 bg-blue flex-column">
+      <div className="lg:px-20 py-6 bg-orange flex-column">
         {index === 0 && (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            fill="currentColor"
+            fill="white"
             className="w-6 h-6 m-auto"
           >
             <path
@@ -24,7 +24,7 @@ const SkillCard = (props) => {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            fill="currentColor"
+            fill="white"
             className="w-6 h-6 m-auto"
           >
             <path
@@ -38,7 +38,7 @@ const SkillCard = (props) => {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            fill="currentColor"
+            fill="white"
             className="w-6 h-6 m-auto"
           >
             <path
@@ -54,13 +54,15 @@ const SkillCard = (props) => {
             />
           </svg>
         )}
-        <p className="text-center text-base font-bold">{skillTitle}</p>
+        <p className="text-center text-base text-white font-bold">
+          {skillTitle}
+        </p>
       </div>
 
       <div className="p-6 flex-column justify-content:center align-items:center">
         {skillList &&
           skillList.map((skill, index) => (
-            <p key={index} className="text-center text-sm ">
+            <p key={index} className="text-center text-base lg:text-base ">
               {skill}
             </p>
           ))}

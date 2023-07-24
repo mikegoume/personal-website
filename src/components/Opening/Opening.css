@@ -30,3 +30,7 @@
     );
   }
 }
+
+.css-xnb998-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: #ff901b !important;
+}

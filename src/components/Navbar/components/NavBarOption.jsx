@@ -14,8 +14,10 @@ const NavBarOption = ({ id, title, componentToScrollId }) => {
 
   return (
     <Button onClick={handleScreenScroll}>
-      <span>{id}.</span>
-      {title}
+      <p className="font-sans text-sm text-black font-semibold">
+        <span className="font-sans text-xs text-orange">{id}.</span>
+        {title}
+      </p>
     </Button>
   );
 };

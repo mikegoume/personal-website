@@ -12,6 +12,8 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
+      white: "#fff",
+      black: "#000",
       darkblue: "#220070",
       blue: "#450eff",
       purple: "#7e5bef",
@@ -22,7 +24,7 @@ module.exports = {
       yellow: "#ffc82c",
       "gray-dark": "#273444",
       gray: "#8492a6",
-      "gray-light": "#d3dce6",
+      graylight: "#d3dce6",
       backgroundPrimary: "#08356b",
       activePrimary: "#143887",
       activeSecondary: "#fa5821",

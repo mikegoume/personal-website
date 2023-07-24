@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className="relative w-full">
       <div className="container max-w-5xl mx-auto p-6 flex justify-between">
-        <span className="font-sans text-xl flex items-center text-orange">
+        <span className="font-sans italic text-xl flex items-center text-orange">
           {"<MICHALIS.DEV />"}
         </span>
         <div className="flex items-center"></div>
