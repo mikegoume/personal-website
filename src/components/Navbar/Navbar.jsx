@@ -57,10 +57,10 @@ const Navbar = () => {
           id="menu"
           className="absolute flex flex-col items-center self-end height-full py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow z-50"
         >
-          <a href="#">About</a>
-          <a href="#">Work Experience</a>
-          <a href="#">Skills</a>
-          <a href="#">Contact</a>
+          <a href="#about">About</a>
+          <a href="#workExperience">Work Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </div>
       )}
     </nav>
