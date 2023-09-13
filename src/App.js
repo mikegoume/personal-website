@@ -4,7 +4,6 @@ import Opening from "./components/Opening/Opening";
 import AboutMe from "./components/AboutMe/AboutMe";
 import ContactMe from "./components/ContactMe/ContactMe";
 import "./index.css";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   return (

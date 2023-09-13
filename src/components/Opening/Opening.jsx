@@ -1,10 +1,18 @@
 import React from "react";
 import { Button } from "@mui/material";
 import ProfilePicture from "../../assets/images/profilePicture.jpg";
-import "./Opening.css";
 import Reveal from "../Reveal";
+import "./Opening.css";
 
 const Opening = () => {
+  const handleScreenScroll = () => {
+    const element = document.getElementById("contact-container");
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="flex flex-col-reverse justify-center lg:flex-row h-screen lg:justify-between items-center">
       <div className="lg:w-3/5 w-4/5">
@@ -30,6 +38,7 @@ const Opening = () => {
         </Reveal>
         <Reveal>
           <Button
+            onClick={handleScreenScroll}
             className="contact-me-button"
             variant="contained"
             sx={{

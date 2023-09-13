@@ -3,7 +3,7 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { Button, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 
 function ContactMe() {
   const openNewTab = (url) => {
